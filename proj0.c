@@ -1,5 +1,3 @@
-
-
 #include "types.h"
 #include "stat.h"
 #include "user.h"
@@ -13,10 +11,13 @@
 // seems every shell command has a main() that takes args
 int main(int argc, char *argv[])
 {
+    // printf(stdout) the phrase and then all the args provided after the shell command
+    printf(1, "CSE3320 proj0 printing in user space: ");
 
-    // file-descriptor 1 is stdout
-    printf(1, "CSE3320 proj0 printing in user space: \n"); 
-    // 2 is error stuff
-    printf(2, "oops\n"); 
+    // inspired by ls.c
+    int i;
+    for(i=1; i<argc; i++)
+        printf(1, "%s ", argv[i]);
+    printf(1, "\n");
     exit();
 }
