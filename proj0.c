@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
     // printf(stdout) the phrase and then all the args provided after the shell command
     printf(1, "CSE3320 proj0 printing in user space: ");
-
+    // using fd-1 bc using stdout
     // inspired by ls.c
     int i;
     for(i=1; i<argc; i++)
